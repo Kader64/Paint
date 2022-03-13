@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <VBox>
+         <MenuBar>
+            <Menu text="File">
+               <MenuItem onAction="#save" text="Save" />
+               <MenuItem onAction="#saveAs" text="Save as" />
+               <MenuItem onAction="#open" text="Open" />
+               <MenuItem onAction="#exit" text="Exit" />
+            </Menu>
+         </MenuBar>
+            <ToolBar>
+               <HBox alignment="CENTER" spacing="5">
+                  <Label text="Size:" />
+                  <TextField fx:id="brushSize" maxWidth="60" text="18" />
+                  <ColorPicker fx:id="colorPicker" />
+                  <CheckBox fx:id="eraser" text="Eraser" />
+                  <ChoiceBox fx:id="shapeBox" />
+                  <ChoiceBox fx:id="typeBox" />
+                  <Label text="Width:" />
+                  <TextField fx:id="width" maxWidth="80" text="800" />
+                  <Label text="Height:" />
+                  <TextField fx:id="height" maxWidth="80" text="600" />
+                  <TextField fx:id="mouseLocation" editable="false" focusTraversable="false" maxWidth="120" mouseTransparent="false" text="" />
+               </HBox>
+            </ToolBar>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane>
+         <Canvas fx:id="canvas" height="600.0" width="800.0" BorderPane.alignment="CENTER"/>
+      </ScrollPane>
+   </center>
+</BorderPane>
